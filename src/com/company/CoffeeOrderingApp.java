@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.*;
 import java.util.Scanner;
 
 public class CoffeeOrderingApp {
@@ -20,7 +21,13 @@ public class CoffeeOrderingApp {
 
         // Kullanıcıdan bir kahve numarası girmesini istediğimiz bölüm
         System.out.print("Lütfen içmek istediğiniz kahvenin numarasını giriniz: ");
-        int coffeeType = scanner.nextInt();
+        int coffeeType;
+        try {
+            coffeeType = scanner.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Girdiğiniz seçenek geçersiz. Lütfen yukarıdaki listeye göre seçiminizi yapın.");
+            return;
+        }
 
         // Seçilen türde bir kahve nesnesi oluşturma
         Coffee coffee = createCoffee(coffeeType);
