@@ -4,13 +4,12 @@ package com.company;
 class HotWater extends Coffee {
 
     public HotWater() {
-        super("Hot Water", 5, 0, 4, 2);
+        super("Hot Water", 5, 0, 5,0,0,0);
     }
 
     // prepare method'u override edilerek Polymorphism mekanizması kullanılıyor
     @Override
     public void prepare() {
-        System.out.println("Teşekkürler içeceğiniz hazırlanıyor...");
-        System.out.println("Hot Water seçtiniz. Bu içeceğimiz beş doz sıcak su içermektedir. Afiyet Olsun.");
+        this.printPrepareMessage();
     }
 }

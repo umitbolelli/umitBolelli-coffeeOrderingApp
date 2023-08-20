@@ -4,13 +4,12 @@ package com.company;
 class Americano extends Coffee {
 
     public Americano() {
-        super("Americano", 25, 1, 4, 2);
+        super("Americano", 25, 1, 4, 0, 0,0);
     }
 
     // prepare method'u override edilerek Polymorphism mekanizması kullanılıyor
     @Override
     public void prepare() {
-        System.out.println("Teşekkürler içeceğiniz hazırlanıyor...");
-        System.out.println("Americano seçtiniz. Bu içeceğimiz bir doz espresso ve dört doz sıcak su içermektedir. Afiyet Olsun.");
+        this.printPrepareMessage();
     }
 }
