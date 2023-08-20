@@ -38,7 +38,7 @@ public class CoffeeOrderingApp {
     }
 
     // Switch case ile seçilen türe göre kahve oluşturma
-    private static Coffee createCoffee(int coffeeType) {
+    static Coffee createCoffee(int coffeeType) {
         switch (coffeeType) {
             case 1:
                 return new Espresso();
